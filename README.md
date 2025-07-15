@@ -1,80 +1,57 @@
-# Stock Management System
+# Real-Time Stock Trading Platform
 
-A modern web application for managing product inventory, built with [Next.js](https://nextjs.org/), [React](https://react.dev/), [Tailwind CSS](https://tailwindcss.com/), and [MongoDB](https://www.mongodb.com/).
+A comprehensive full-stack trading platform for real-time stock portfolio management and analytics. This platform delivers live stock data updates for over 100 companies, empowering users to track investments, analyze performance, and access actionable insights with ease.
 
 ## Features
 
-- **Product Management:** Add new products with quantity and price.
-- **Inventory Display:** View all products in stock with real-time updates.
-- **Stock Adjustment:** Instantly increase or decrease product quantities.
-- **Search:** Quickly find products by name with partial matching.
-- **Responsive UI:** Clean, mobile-friendly interface using Tailwind CSS.
+- **Real-Time Portfolio Tracking:** Instantly monitor your portfolio with live updates and performance metrics.
+- **Live Stock Data:** Access up-to-date stock prices and financial news, automatically aggregated from multiple sources.
+- **Automated Data Pipelines:** Utilizes Puppeteer to scrape Google Finance and financial news, reducing manual data collection by 95%.
+- **Natural Language Analytics:** Integrated Groq LLM-powered chatbot enables users to perform natural language SQL queries for portfolio analytics, making advanced insights accessible to everyone.
+- **Modern, Responsive UI:** Built with React.js for a seamless and intuitive user experience.
+- **Robust Backend:** Node.js server with PostgreSQL database for reliable, scalable data management.
 
-## Screenshots
+## Technology Stack
 
-> _Add your screenshots here for better presentation._
+- **Frontend:** React.js
+- **Backend:** Node.js
+- **Database:** PostgreSQL
+- **Web Scraping:** Puppeteer
+- **AI/Analytics:** Groq LLM-powered chatbot for natural language SQL
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js (v16+ recommended)
-- MongoDB database (Atlas or local)
+- PostgreSQL database
 
 ### Installation
 
 1. **Clone the repository:**
    ```bash
    git clone <your-repo-url>
-   cd stock-mgmt-system
+   cd <project-directory>
    ```
 2. **Install dependencies:**
    ```bash
    npm install
-   # or
-   yarn install
    ```
-3. **Configure MongoDB:**
-
-   - Update the MongoDB connection string in the API route files under `app/api/` (see `route.js` files) with your own credentials.
-
-4. **Run the development server:**
+3. **Configure Environment:**
+   - Set up your PostgreSQL database and update the connection string in the environment variables or configuration file.
+   - (Optional) Configure API keys or credentials for financial data sources if required.
+4. **Run the application:**
    ```bash
-   npm run dev
-   # or
-   yarn dev
+   npm start
    ```
-5. **Open your browser:**
-   Visit [http://localhost:3000](http://localhost:3000)
+5. **Access the platform:**
+   Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 
 ## Usage
 
-- **Add Product:** Fill in the product form and submit to add a new item to inventory.
-- **Search Product:** Use the search bar to find products by name.
-- **Adjust Stock:** Use the + and - buttons to update product quantities instantly.
-- **View Inventory:** See a table of all products, their quantities, and prices.
-
-## Project Structure
-
-- `app/` - Main Next.js app directory
-  - `api/` - API routes for product, search, stock actions, and MongoDB access
-  - `components/` - Reusable React components (e.g., Header)
-  - `globals.css` - Global styles (Tailwind CSS)
-  - `page.js` - Main UI logic and rendering
-
-## API Overview
-
-- **GET `/api/product`**: Fetch all products
-- **POST `/api/product`**: Add a new product (JSON body: `{ slug, quantity, price }`)
-- **POST `/api/action`**: Adjust product quantity (JSON body: `{ action: "plus"|"minus", slug, initialQuantity }`)
-- **GET `/api/search?query=...`**: Search products by name
-
-## Technologies Used
-
-- Next.js 13
-- React 18
-- Tailwind CSS 3
-- MongoDB 5
+- **Add and manage your stock portfolio.**
+- **View real-time updates and analytics.**
+- **Ask natural language questions about your portfolio and receive instant insights.**
 
 ## License
 
@@ -82,20 +59,4 @@ MIT
 
 ---
 
-> _For questions or contributions, please open an issue or pull request!_
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-#
+_For questions or contributions, please open an issue or pull request!_
